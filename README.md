@@ -1,5 +1,5 @@
 
-<img width="48" height="48" alt="66fa9aaeef4557150bf89386_66fa9a6bf6c7ee3f2e3759fa_Teleprompter com%20Logo" src="https://github.com/user-attachments/assets/e0139f23-623a-48cd-afcb-cafb93b4b8b6" />
+<img width="120" height="120" alt="Notch Prompter Logo" src="https://github.com/user-attachments/assets/e0139f23-623a-48cd-afcb-cafb93b4b8b6" />
 
 # Notch Prompter
 
