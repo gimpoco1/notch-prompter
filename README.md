@@ -1,4 +1,7 @@
-# Notch Prompter (Swift)
+
+<img width="1024" height="1024" alt="66fa9aaeef4557150bf89386_66fa9a6bf6c7ee3f2e3759fa_Teleprompter com%20Logo" src="https://github.com/user-attachments/assets/e0139f23-623a-48cd-afcb-cafb93b4b8b6" />
+
+# Notch Prompter
 
 This project is now a **Swift** macOS app. It runs as:
 - a **control window** (SwiftUI)
