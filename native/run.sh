@@ -15,6 +15,11 @@ xcrun --sdk macosx swiftc "$ROOT_DIR/native/NotchPrompter.swift" \
   -target "$TARGET" \
   -framework Cocoa \
   -framework SwiftUI \
-  -framework Combine
+  -framework Combine \
+  -framework AVFoundation \
+  -Xlinker -sectcreate \
+  -Xlinker __TEXT \
+  -Xlinker __info_plist \
+  -Xlinker "$ROOT_DIR/native/Info.plist"
 
 "$OUT"
