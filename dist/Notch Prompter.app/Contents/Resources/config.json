@@ -1,0 +1,19 @@
+{
+  "text": "",
+  "speed": 22,
+  "fontSize": 14,
+  "width": 300,
+  "height": 100,
+  "opacity": 1,
+  "paddingX": 18,
+  "paddingY": 12,
+  "mode": "loop",
+  "notchWidth": 220,
+  "notchHeight": 28,
+  "notchRadius": 14,
+  "panelRadius": 26,
+  "dockOffset": 0,
+  "running": true,
+  "voiceControlEnabled": false,
+  "voiceSensitivity": 0.6
+}

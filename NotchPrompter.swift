@@ -116,8 +116,13 @@ struct PrompterConfig: Codable {
 }
 
 func loadConfig() -> PrompterConfig {
+  if let bundled = Bundle.main.url(forResource: "config", withExtension: "json")?.path {
+    let config = PrompterConfig.load(from: bundled)
+    return config
+  }
+
   let cwd = FileManager.default.currentDirectoryPath
-  let configPath = URL(fileURLWithPath: cwd).appendingPathComponent("native/config.json").path
+  let configPath = URL(fileURLWithPath: cwd).appendingPathComponent("config.json").path
   return PrompterConfig.load(from: configPath)
 }
 
@@ -837,6 +842,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
   private var lastToggle = Date.distantPast
 
   func applicationDidFinishLaunching(_ notification: Notification) {
+    applyAppIcon()
     setupMainMenu()
     state.autoFitNotch()
     createOverlayPanel()
@@ -848,6 +854,19 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
   func applicationWillTerminate(_ notification: Notification) {
     hoverTimer?.invalidate()
+  }
+
+  private func applyAppIcon() {
+    let bundleIcon = Bundle.main.url(forResource: "AppIcon", withExtension: "icns")
+      ?? Bundle.main.url(forResource: "AppIcon", withExtension: "png")
+      ?? Bundle.main.url(forResource: "icon", withExtension: "png")
+
+    let iconPath = bundleIcon?.path ?? URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
+      .appendingPathComponent("icon.png").path
+
+    if let image = NSImage(contentsOfFile: iconPath) {
+      NSApplication.shared.applicationIconImage = image
+    }
   }
 
   private func createOverlayPanel() {

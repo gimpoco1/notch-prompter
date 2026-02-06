@@ -8,6 +8,8 @@
   <string>Notch Prompter</string>
   <key>CFBundleExecutable</key>
   <string>NotchPrompter</string>
+  <key>CFBundleIconFile</key>
+  <string>AppIcon</string>
   <key>CFBundleIdentifier</key>
   <string>com.giacomo.notchprompter</string>
   <key>CFBundleInfoDictionaryVersion</key>

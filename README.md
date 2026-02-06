@@ -7,7 +7,7 @@ This project is now a **Swift** macOS app. It runs as:
 ## Run
 
 ```bash
-./native/run.sh
+./run.sh
 ```
 
 This builds a native binary and launches it.
@@ -17,7 +17,7 @@ This builds a native binary and launches it.
 Build a shareable `.app` and zip it:
 
 ```bash
-./native/package.sh
+./package.sh
 ```
 
 Send `dist/NotchPrompter.zip` :
@@ -32,7 +32,7 @@ xattr -dr com.apple.quarantine "/Applications/Notch Prompter.app"
 
 ## Default Settings
 
-Edit `native/config.json` to change the default values (notch size, overlay size, speed, etc.).
+Edit `config.json` to change the default values (notch size, overlay size, speed, etc.).
 
 Example:
 ```json
@@ -50,6 +50,6 @@ If you break the JSON, the app will fall back to built-in defaults.
 
 ## Files
 
-- `native/NotchPrompter.swift` — full app (overlay + control UI)
-- `native/run.sh` — build & run script
-- `native/config.json` — defaults
+- `NotchPrompter.swift` — full app (overlay + control UI)
+- `run.sh` — build & run script
+- `config.json` — defaults
