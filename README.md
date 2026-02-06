@@ -12,6 +12,24 @@ This project is now a **Swift** macOS app. It runs as:
 
 This builds a native binary and launches it.
 
+## Share app (local distribution)
+
+Build a shareable `.app` and zip it:
+
+```bash
+./native/package.sh
+```
+
+Send `dist/NotchPrompter.zip` :
+1. Unzip it.
+2. Move `Notch Prompter.app` to `/Applications` (optional).
+3. First run: right-click the app and choose **Open** (Gatekeeper prompt).
+
+If macOS blocks it, run:
+```bash
+xattr -dr com.apple.quarantine "/Applications/Notch Prompter.app"
+```
+
 ## Default Settings
 
 Edit `native/config.json` to change the default values (notch size, overlay size, speed, etc.).
