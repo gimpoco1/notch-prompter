@@ -3,7 +3,7 @@
 
 # Notch Prompter
 
-This project is now a **Swift** macOS app. It runs as:
+This project is a **Swift** macOS app. It runs as:
 - a **control window** (SwiftUI)
 - a **notch overlay panel** (NSPanel at status-bar level)
 
